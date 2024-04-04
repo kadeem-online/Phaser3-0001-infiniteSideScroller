@@ -1,4 +1,5 @@
 import Phaser from "phaser";
+import { LoadingScene } from "./scenes/LoadingScene";
 
 window.addEventListener("load", onLoad);
 
@@ -15,6 +16,7 @@ function onLoad(event){
     scale: {
       mode: Phaser.Scale.ScaleModes.FIT
     },
+    scene: LoadingScene
   });
   return;
 }
