@@ -1,4 +1,9 @@
-import { SCENE_LOADING, SCENE_MAIN_MENU, TEXTURE_PLAYER_WALK } from "../Keys";
+import {
+	SCENE_LOADING,
+	SCENE_MAIN_MENU,
+	TEXTURE_GROUND_TILE,
+	TEXTURE_PLAYER_WALK,
+} from "../Keys";
 import { MainMenuScene } from "./MainMenuScene";
 
 export class LoadingScene extends Phaser.Scene {
@@ -7,12 +12,16 @@ export class LoadingScene extends Phaser.Scene {
 	}
 
 	preload() {
+		// player walk
 		this.load.spritesheet(TEXTURE_PLAYER_WALK, "./images/player-walk.png", {
 			frameWidth: 72,
 			frameHeight: 97,
 			startFrame: 0,
 			endFrame: 11,
 		});
+
+		// ground tile
+		this.load.image(TEXTURE_GROUND_TILE, "./images/ground-tile.png");
 	}
 
 	create() {
